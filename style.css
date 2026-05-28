@@ -38,7 +38,20 @@ main {
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 16px;
 }
+
+/* Default page body alignment */
+body > section,
+body > main,
+body > footer {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 
 /* 5. Header */
 header {
@@ -120,6 +133,19 @@ img {
   margin: 18px auto;
   border-radius: 10px;
 }
+
+/* Keep list content aligned nicely when there isn't a dedicated wrapper */
+section > ul {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact/other address text alignment */
+address {
+  text-align: left;
+}
+
 
 /* 9. Services list (ul direct under section) */
 section > ul {
