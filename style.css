@@ -147,14 +147,15 @@ section ul {
 /* 8. Images */
 img {
   display: block;
-  width: auto;
+  width: 100%;
   max-width: 100%;
   height: auto;
   max-height: 340px;
   object-fit: cover;
-  margin: 18px auto;
-  border-radius: 10px;
+  margin: 1.125rem auto; /* relative units */
+  border-radius: 0.625rem; /* relative units */
 }
+
 
 /* Keep list content aligned nicely when there isn't a dedicated wrapper */
 section > ul {
@@ -256,6 +257,13 @@ footer {
 }
 
 /* 13. Responsiveness */
+@media (max-width: 900px) {
+  /* Multi-column layouts collapse gracefully */
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 650px) {
   nav ul li {
     margin: 8px 6px;
@@ -275,5 +283,23 @@ footer {
   img {
     max-height: 260px;
   }
+
+  /* Make sure any card/grid sections become single column on small screens */
+  .columns {
+    grid-template-columns: 1fr;
+  }
 }
+
+/* 14. Multi-column layout utility */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.columns > * {
+  min-width: 0;
+}
+
 
