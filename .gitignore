@@ -1,9 +1,0 @@
-# Build / temp
-*.log
-node_modules/
-
-# Local assets you may generate
-logo.png
-images.html/
-TODO.md
-

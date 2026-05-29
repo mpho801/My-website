@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="UTF-8">
-    <title>Enquiry - BloomSoft</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Enquiry - BloomSoft</title>
 </head>
 <body>
 
@@ -22,19 +22,25 @@
 </header>
 
 <main>
-    <form>
-        <label>Name:</label><br>
-        <input type="text" name="name"><br><br>
+  <section>
+    <h2>Let’s Talk Skincare</h2>
+    <p>Send us your questions, product requests, or partnership enquiries. We’ll respond as soon as possible.</p>
+  </section>
 
-        <label>Email:</label><br>
-        <input type="email" name="email"><br><br>
+  <form autocomplete="off" autocapitalize="off" spellcheck="false">
+    <label>Name:</label><br>
+    <input type="text" name="name" placeholder="Your full name"><br><br>
 
-        <label>Message:</label><br>
-        <textarea name="message"></textarea><br><br>
+    <label>Email:</label><br>
+    <input type="email" name="email" placeholder="you@example.com"><br><br>
 
-        <button type="submit">Submit</button>
-    </form>
+    <label>Message:</label><br>
+    <textarea name="message" placeholder="Tell us what you need..."></textarea><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
 </main>
+
 
 <footer>
     <p>&copy; 2026 BloomSoft</p>
