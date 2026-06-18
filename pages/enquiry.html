@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="in Polokwane. Phone:065 982 6078,Email : support@bloomsoftskincare.com . Find us at Bloomsoft  Skincare.">
+    <meta name="keywords" content="contact Bloomsoft  Skincare, Polokwane, phone, email, address,Bloomsoft  Skincare enquiry, South Africa">
+    <title>ENQURIY - Bloomsoft  Skincare</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+      <!-- Logo -->
+  
+  <img src="../Assests/logo.png" alt=" Bloomsoft" width="200">
+ 
+  </div>
+
+<header>
+   
+      <!-- Navigation -->
+    <nav>
+       <div style="text-align:center;">
+         <h2 style="margin-top:18px; color: var(--primary);"></h2>
+        <ul style="list-style:none; padding-left:0; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:0;">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+      
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+     <div class="info-item" style="text-align:center; margin-top:12px;">
+        <strong>Live Date &amp; Time:</strong>
+        <span id="contactDateTime" style="font-weight: 600;"></span>
+      </div>
+    
+
+</header>
+
+<main>
+    <section class="contact-info reveal-on-load">
+      <h2>Submit Your Enquiry</h2>
+
+      <p style="margin-top:0;">
+        Tell us what you need and we’ll respond with cost, availability, and next steps.
+      </p>
+
+    
+    </section>
+  <section>
+    <h2>Let’s Talk Skincare</h2>
+    <p>Send us your questions, product requests, or partnership enquiries. We’ll respond as soon as possible.</p>
+
+    <div class="columns">
+      <div>
+        <h3>What to include</h3>
+        <ul>
+          <li>Your skin type (oily, dry, combination, sensitive)</li>
+          <li>Any concerns (acne, dullness, dryness, dark spots)</li>
+          <li>How you want to use the products</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>We’ll help you choose</h3>
+        <p>Share your needs and we’ll suggest a simple routine that fits your lifestyle.</p>
+      </div>
+    </div>
+  </section>
+  <section class="contact-form">
+      <h2>Enquiry Form</h2>
+
+      <form id="enquiryForm" action="/api/enquiry" method="post" autocomplete="on" novalidate>
+        <div class="form-group">
+          <label for="enquiry-name">Full Name</label>
+          <input
+            type="text"
+            id="enquiry-name"
+            name="name"
+            placeholder="Enter your name"
+            required
+            minlength="2"
+            autocomplete="name"
+          />
+          <div id="enquiry-name-error" style="display:none; color:#d81b60; font-weight:600;">Please enter at least 2 characters.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="enquiry-email">Email</label>
+          <input
+            type="email"
+            id="enquiry-email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            autocomplete="email"
+          />
+          <div id="enquiry-email-error" style="display:none; color:#d81b60; font-weight:600;">Please enter a valid email address.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="enquiry-phone">Phone Number</label>
+          <input
+            type="tel"
+            id="enquiry-phone"
+            name="phone"
+            placeholder="e.g. 071 314 1475"
+            required
+            inputmode="tel"
+            autocomplete="tel"
+            pattern="[0-9\-\+\s]{10,}"
+          />
+          <div id="enquiry-phone-error" style="display:none; color:#d81b60; font-weight:600;">Please enter a valid phone number (at least 10 digits).</div>
+        </div>
+
+        <div class="form-group">
+          <label for="enquiry-type">Enquiry Type</label>
+          <select id="enquiry-service" name="service" required>
+            <option value="">Select an option</option>
+            <option value="services">Services (consultation/custom design)</option>
+            <option value="products">Products (availability + pricing)</option>
+            <option value="volunteer">Volunteer</option>
+            <option value="sponsor">Sponsor</option>
+          </select>
+          <div id="enquiry-service-error" style="display:none; color:#d81b60; font-weight:600;">Please select an enquiry type.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="enquiry-date">Preferred Date (optional)</label>
+          <input type="date" id="enquiry-date" name="date" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+          <label for="enquiry-message">Your Message</label>
+          <textarea
+            id="enquiry-message"
+            name="message"
+            rows="6"
+            placeholder="Describe what you need (include sizes, style, budget range, and deadline if any)."
+            required
+            minlength="10"
+          ></textarea>
+          <div id="enquiry-message-error" style="display:none; color:#d81b60; font-weight:600;">Please enter at least 10 characters.</div>
+        </div>
+
+        <button type="submit" name="button">Send Enquiry</button>
+
+        <div id="enquiry-success" style="display:none; margin-top:14px; color: #2e7d32; font-weight: 700;">
+          Thanks! Your enquiry has been sent successfully.
+        </div>
+      </form>
+    </section>
+
+</main>
+
+<div style="text-align:center;">
+             <div class="social">
+                <h4>Follow Us</h4>
+                <div class="social-links" style="justify-content:center;">
+                    <a href="https://facebook.com">Facebook</a>
+                    <a href="https://instagram.com" class="instagram">Instagram</a>
+                    <a href="https://twitter.com" class="twitter">Twitter</a>
+                    <a href="https://youtube.com" class="youtube">YouTube</a>
+                </div>
+            </div>
+</div>
+<footer>
+    <p>&copy; 2025 BloomSoft</p>
+</footer>
+
+  <script src="../JS/app.js"></script>
+</body>
+</html>
